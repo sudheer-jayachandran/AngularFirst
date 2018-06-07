@@ -1,0 +1,11 @@
+{
+    "VARS":{
+        "Home":"होम",
+        "Newcourses":"नए पाठ्यक्रम",
+        "Reviews":"समीक्षा",
+        "Offers":"ऑफरस ",
+        "Offices":"कार्यालयों",
+        "Virtualclass":"वर्चुअल क्लास",
+		"Schedule":"अनुसूची"
+    }
+}

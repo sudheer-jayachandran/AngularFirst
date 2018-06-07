@@ -1,0 +1,12 @@
+<a routerLink="cdetails/{{current.name}}">
+<div class="course" [highlight]="current.price">
+  <div class="cpic">
+    <img src="../../../../assets/{{current.image}}">
+  </div>
+  <h3>{{current.name | uppercase}}</h3>
+  <h4>Price: {{current.price | discount:offer | currency:"INR"}}
+    <span *ngIf="offer">(<del>{{current.price | currency:"INR"}}</del>)</span>
+  </h4>
+  <h5>{{current.description}}</h5>
+</div>
+</a>

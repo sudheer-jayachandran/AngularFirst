@@ -1,0 +1,50 @@
+<div class="rform">
+    <form      [formGroup]="reviewForm"  (submit)="saveReview()">
+           <table>
+               <tr>
+               <th>Name</th>
+               <td><input type="text" formControlName="name"></td>
+               <td>
+                      <div *ngIf='reviewForm.controls.name.hasError("required")'>
+                              Should be filled</div>
+                   <div *ngIf='reviewForm.controls.name.hasError("needFormat")'>
+                                  No Symbols allowed for name</div>
+               </td>
+               </tr>
+                <tr>
+               <th>Email</th>
+               <td><input type="text" formControlName="email"></td>
+               <td>
+                      <div *ngIf='reviewForm.controls.email.hasError("required")'>
+                              Should be filled</div>
+                      <div *ngIf='reviewForm.controls.email.hasError("pattern")'>
+                                  Should be in email format</div>
+               </td>
+               </tr>
+               <tr>
+               <th>Course</th>
+               <td><select formControlName="course">
+                   <option *ngFor="let x of courses">{{x}}</option>
+                  </select>
+                  </td>
+               <td></td>
+               </tr>
+               <tr>
+                   <th>Message</th>
+                   <td><textarea rows=6 cols=50 formControlName="message">
+                       </textarea></td>
+                   <td>
+                          <div *ngIf='reviewForm.controls.message.hasError("required")'>
+                                  Should be filled</div>
+                   </td>
+               </tr>
+               <tr><td colspan="3" align="center">
+                      <button type="submit"  class="btn btn-primary" [disabled]="!reviewForm.valid">
+                                 Post Review</button>
+                  </td></tr>
+           </table>
+      
+      
+      </form>
+  </div>
+<app-review *ngFor="let x of reviews" [review]="x"></app-review>

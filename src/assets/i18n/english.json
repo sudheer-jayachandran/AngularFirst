@@ -1,0 +1,11 @@
+{
+    "VARS":{
+        "Home":"Home",
+        "Newcourses":"New Courses",
+        "Reviews":"Reviews",
+        "Offers":"Offers",
+        "Offices":"Offices",
+        "Virtualclass":"Virtual class",
+		"Schedule":"Schedule"
+    }
+}
